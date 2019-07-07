@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Upgrade } from '../upgrade'
 
 @Component({
   selector: 'app-upgrade-bar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpgradeBarComponent implements OnInit {
 
-  constructor() { }
+  availableUpgrades : Array<Upgrade>
 
-  ngOnInit() {
-  }
+    constructor() {
+        
+    }
+
+    ngOnInit() {
+        this.availableUpgrades = [
+            new Upgrade("New Mouse", 10),
+            new Upgrade("New Computer", 20),
+        ]
+
+    }
 
 }
