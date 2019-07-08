@@ -1,3 +1,9 @@
-<div *ngFor="let upgrade of availableUpgrades">
-    <app-upgrade-item></app-upgrade-item>
+<div class="upgrade-bar-grid">
+    <div class="upgrade-bar-header">
+        Upgrade Store
+    </div>
+
+    <div *ngFor="let upgrade of availableUpgrades">
+        <app-upgrade-item></app-upgrade-item>
+    </div>
 </div>

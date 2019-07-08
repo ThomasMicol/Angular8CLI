@@ -1,0 +1,5 @@
+.upgrade-bar-grid{
+    display: grid;
+    grid-column: 1fr;
+    grid-auto-columns: repeat(6, 1fr);
+}
