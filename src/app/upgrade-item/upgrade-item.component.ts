@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UpgradeModel } from '../upgrade-model';
 
 @Component({
   selector: 'app-upgrade-item',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpgradeItemComponent implements OnInit {
 
+  @Input() upgrade : UpgradeModel
+  
   constructor() { }
 
   ngOnInit() {
