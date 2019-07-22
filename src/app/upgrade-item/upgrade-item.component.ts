@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UpgradeModel } from '../upgrade-model';
 
 @Component({
@@ -9,12 +9,15 @@ import { UpgradeModel } from '../upgrade-model';
 export class UpgradeItemComponent implements OnInit {
 
   @Input() upgrade : UpgradeModel
+  @Output() onPurchase: EventEmitter<any> = new EventEmitter();
+
   
   constructor() { }
 
-  Purchase(upgrade : UpgradeModel)
+  PurchaseWasClicked(upgrade : UpgradeModel)
   {
-    console.info([upgrade])
+    console.info([upgrade]);
+    this.onPurchase.emit([upgrade]);
   }
 
   ngOnInit() {
