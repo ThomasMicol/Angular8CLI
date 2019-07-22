@@ -8,7 +8,7 @@ import { UpgradeModel } from '../upgrade-model';
 })
 export class UpgradeItemComponent implements OnInit {
 
-  @Input() upgrade : UpgradeModel
+  @Input() upgrade : UpgradeModel;
   @Output() onPurchase: EventEmitter<any> = new EventEmitter();
 
   

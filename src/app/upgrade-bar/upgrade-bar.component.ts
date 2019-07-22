@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Upgrade } from '../upgrade';
 import { EffectTargetEnum } from '../effect-target-enum.enum';
 
@@ -9,10 +9,18 @@ import { EffectTargetEnum } from '../effect-target-enum.enum';
 })
 export class UpgradeBarComponent implements OnInit {
 
+  @Output() onPurchase: EventEmitter<any> = new EventEmitter();
+
   availableUpgrades : Array<Upgrade>
+
 
     constructor() {
         
+    }
+
+    onPurchaseEvent($event){
+      console.log([$event]);
+      this.onPurchase.emit($event);
     }
 
     ngOnInit() {

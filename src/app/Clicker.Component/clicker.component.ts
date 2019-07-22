@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'clicker',
@@ -6,14 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./clicker.component.scss']
 })
 export class ClickerComponent {
+    @Input() flatClick : number;
+    @Input() clickMult : number;
+
     title : string  = 'clickster';
-    flatCLick : number = 1;
-    clickMult : number = 1;
     money : number = 0;
 
     Click(){
         console.log(this.money);
-        this.money = this.money + 1;
+        this.money = (this.money + this.flatClick) * this.clickMult;
     }
 
     onPurchaseEvent(){
