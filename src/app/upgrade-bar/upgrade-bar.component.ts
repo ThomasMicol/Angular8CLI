@@ -9,8 +9,6 @@ import { EffectTargetEnum } from '../effect-target-enum.enum';
 })
 export class UpgradeBarComponent implements OnInit {
 
-  
-
   availableUpgrades : Array<Upgrade>
 
     constructor() {

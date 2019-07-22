@@ -12,6 +12,11 @@ export class UpgradeItemComponent implements OnInit {
   
   constructor() { }
 
+  Purchase(upgrade : UpgradeModel)
+  {
+    console.info([upgrade])
+  }
+
   ngOnInit() {
   }
 
