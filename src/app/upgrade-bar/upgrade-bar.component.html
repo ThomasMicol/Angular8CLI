@@ -3,8 +3,10 @@
         Upgrade Store
     </div>
 
-    <app-upgrade-item *ngFor="let upgrade of availableUpgrades"
+    <app-upgrade-item 
+        *ngFor="let upgrade of availableUpgrades"
         [upgrade]="upgrade"
+        (onPurchase)="onPurchaseEvent($event)"
     >
     
     </app-upgrade-item>
