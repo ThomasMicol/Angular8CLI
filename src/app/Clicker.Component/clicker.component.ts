@@ -14,7 +14,7 @@ export class ClickerComponent {
 
     Click(){
         console.log(this.money);
-        this.money = (this.money + this.flatClick) * this.clickMult;
+        this.money = this.money + (this.flatClick * this.clickMult);
     }
 
     onPurchaseEvent(){
