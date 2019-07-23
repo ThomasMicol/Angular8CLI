@@ -19,13 +19,12 @@ export class UpgradeBarComponent implements OnInit {
     }
 
     onPurchaseEvent($event){
-      console.log([$event]);
       this.onPurchase.emit($event);
     }
 
     ngOnInit() {
         this.availableUpgrades = [
-            new Upgrade("New Mouse", 10, EffectTargetEnum.FlatClickGain, 10),
+            new Upgrade("New Mouse", 10, EffectTargetEnum.FlatClickGain, 1),
             new Upgrade("New Computer", 20, EffectTargetEnum.ClickGainMultiplier, 2),
         ]
 

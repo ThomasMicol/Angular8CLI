@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'clicker',
@@ -8,17 +8,15 @@ import { Component, Input } from '@angular/core';
 export class ClickerComponent {
     @Input() flatClick : number;
     @Input() clickMult : number;
-
+    @Input() money : number;
+    @Output() moneyAdded : EventEmitter<any> = new EventEmitter();
+    
     title : string  = 'clickster';
-    money : number = 0;
 
     Click(){
         console.log(this.money);
         this.money = this.money + (this.flatClick * this.clickMult);
-    }
-
-    onPurchaseEvent(){
-      console.log("how");
+        this.moneyAdded.emit([this.money]);
     }
   
 }

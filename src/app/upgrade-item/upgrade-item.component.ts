@@ -16,7 +16,6 @@ export class UpgradeItemComponent implements OnInit {
 
   PurchaseWasClicked(upgrade : UpgradeModel)
   {
-    console.info([upgrade]);
     this.onPurchase.emit([upgrade]);
   }
 
